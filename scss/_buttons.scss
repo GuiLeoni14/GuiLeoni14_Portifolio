@@ -1,0 +1,20 @@
+.btn{
+    padding: 0 2.4rem;
+    display: inline-block;
+    font-size: 1.6rem;
+    font-weight: 600;
+    border-radius: 12.2rem;
+    line-height: 4.8rem;
+}
+
+.btn-primary{
+    color: $text-color-primary;
+    border: 2px solid #ffffff;
+    transition: all .4s;
+    &:hover{
+        color: #fff;
+        background-color: $border-color;
+        border: 2px solid #fff;
+    }
+}
+

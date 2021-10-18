@@ -1,0 +1,101 @@
+.s-home{
+    display: flex;
+    align-items: center;
+    background: url(../img/background-home.svg) no-repeat center center;
+    background-size: cover;
+    .container{
+        .main-home{
+            margin-top: 10rem;
+            position: relative;
+            @include flex(row, flex-start, center);
+            .text-home{
+                margin-top: 5rem;
+                width: 45%;
+                h1{
+                    font-size: 8rem;
+                    font-family: 'Poppins', sans-serif;
+                    font-style: italic;
+                    span{
+                        display: flex;
+                        justify-content: flex-end;
+                    }
+                }
+                p{
+                    margin-top: 4rem;
+                    font-size: 1.6rem;
+                    line-height: 150%;
+                }
+                &:after{
+                    position: absolute;
+                    content: "";
+                    left: -1rem;
+                    top: 0;
+                    width: 1%;
+                    height: 100%;
+                    background-color:  rgb(88, 8, 163);
+                }
+            }
+            .img-home{
+                width: 50%;
+                display: flex;
+                align-items: flex-end;
+                flex-direction: column;
+                img{
+                    border-radius: 40%;
+                    max-width: 30rem;
+                    height: auto;
+                }
+                .socias-home{
+                    ul{
+                        margin-top: 2rem;
+                        display: flex;
+                        align-items: center;
+                        li{
+                            &:not(:last-child){
+                                margin-right: 4rem;
+                            }
+                            img{
+                                width: 5rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.s-servicos{
+    background: url(../img/dalmatian-spots.svg) no-repeat center center;
+    background-size: cover;
+    .container{
+        .main-area-servicos{
+            .right-area-servicos{
+                display: block;
+            }
+        }
+    }
+}
+
+@keyframes floating{
+    0%{
+        transform: translateY(0);
+    }
+    66%{
+        transform: translateY(-15px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+@keyframes floatingrigth{
+    0%{
+        transform: translateX(0);
+    }
+    66%{
+        transform: translateX(-15px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+

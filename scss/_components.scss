@@ -1,0 +1,88 @@
+.linguagens{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4rem;
+    .item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: auto;
+        padding: 4rem;
+        max-width: 31%;
+        background-color: rgb(241, 241, 241);
+        border-radius: 50px;
+        box-shadow: -10px -10px 20px #333;
+        .item-img{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 30rem;
+            height: 30rem;
+            border-radius: 50%;
+            border: 10px solid $border-color;
+            margin-bottom: 2rem;
+            transition: all .3s;
+            &:hover{
+                transform: scale(1.1);
+                &#item-img01{
+                    border: 10px solid rgb(255, 102, 0);
+                }
+                &#item-img02{
+                    border: 10px solid rgb(194, 214, 8);
+                }
+                &#item-img03{
+                    border: 10px solid rgb(13, 4, 145);
+                }
+                &#item-img04{
+                    border: 10px solid rgb(170, 53, 194);
+                }
+            }
+            img{
+                width: 100%;
+                max-width: 20rem;
+                height: 20rem;
+            }
+        }
+        h6{
+            padding: 1rem 4rem;
+            font-size: 2rem;
+            border-radius: 10px;
+            color: #fff;
+            background-color: #6D00FF;
+        }
+        p{
+            text-align: center;
+            font-size: 1.6rem;
+            line-height: 150%;
+        }
+        .porcentagem{
+            margin-top: 2rem;
+            width: 100%;
+            max-width: 40rem;
+            height: 5rem;
+            border-radius: 10rem;
+            background-color: rgb(201, 187, 255);
+            .sub-porcentagem{
+                position: relative;
+                width: 65%;
+                max-width: 40rem;
+                height: 5rem;
+                border-radius: 10rem;
+                background-color: crimson;
+                span{
+                    font-size: 3.5rem;
+                    font-weight: 600;
+                    position: absolute;
+                    left: 109px;
+                    top: 0.6rem;
+                }
+            }
+
+        }
+    }
+}
