@@ -1,8 +1,14 @@
 .linguagens{
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 4rem;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    overflow: hidden;
+    padding: 2rem;
+    .swiper-slide{
+        display: flex;
+        justify-content: flex-end;
+    }
     .item{
         display: flex;
         flex-direction: column;
@@ -10,11 +16,11 @@
         justify-content: center;
         width: 100%;
         height: auto;
-        padding: 4rem;
-        max-width: 31%;
+        padding: 1.5rem;
+        // max-width: 31%;
         background-color: rgb(241, 241, 241);
         border-radius: 50px;
-        box-shadow: -10px -10px 20px #333;
+        box-shadow: -10px 10px 10px #333;
         .item-img{
             display: flex;
             flex-direction: column;
@@ -40,6 +46,12 @@
                 }
                 &#item-img04{
                     border: 10px solid rgb(170, 53, 194);
+                }
+                &#item-img05{
+                    border: 10px solid rgb(47, 178, 230);
+                }
+                &#item-img06{
+                    border: 10px solid rgb(64, 100, 165);
                 }
             }
             img{
@@ -69,7 +81,6 @@
             background-color: rgb(201, 187, 255);
             .sub-porcentagem{
                 position: relative;
-                width: 65%;
                 max-width: 40rem;
                 height: 5rem;
                 border-radius: 10rem;
@@ -78,11 +89,45 @@
                     font-size: 3.5rem;
                     font-weight: 600;
                     position: absolute;
-                    left: 109px;
                     top: 0.6rem;
                 }
             }
-
+            #sub-01{
+                width: 80%;
+                span{
+                    left: 185px;
+                }
+            }
+            #sub-02{
+                width: 45%;
+                span{
+                    left: 70px;
+                }
+            }
+            #sub-03{
+                width: 80%;
+                span{
+                    left: 188px;
+                }
+            }
+            #sub-04{
+                width: 70%;
+                span{
+                    left: 156px;
+                }
+            }
+            #sub-05{
+                width: 55%;
+                span{
+                    left: 102px;
+                }
+            }
+            #sub-06{
+                width: 85%;
+                span{
+                    left: 198px;
+                }
+            }
         }
     }
 }
