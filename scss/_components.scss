@@ -90,11 +90,17 @@
                 height: 5rem;
                 border-radius: 10rem;
                 background-color: crimson;
+                &:hover{
+                    span{
+                        color: #f2f2f2;
+                    }
+                }
                 span{
                     font-size: 3.5rem;
                     font-weight: 600;
                     position: absolute;
                     top: 0.6rem;
+                    transition: color .3s;
                 }
             }
             #sub-01{
