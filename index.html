@@ -58,8 +58,8 @@
             <div class="main-area-servicos">
                 <div class="right-area-servicos">
                     <div class="text">
-                        <h2>Tecnologias que eu utilizo</h2>
-                        <span>Algumas ainda ando me aperfeiçoando.</span>
+                        <h2>HABILIDADES</h2>
+                        <span>compremetimento e qualidade</span>
                     </div>
                     <div class="linguagens">
                         <div class="aviso-cards">
@@ -166,7 +166,33 @@
     <section class="s-sobre">
         <div class="container">
             <div class="main-sobre">
-                <h1>Sobre min</h1>
+                <div class="sobre-left">
+                    <h2>Sobre min:</h2>
+                    <ul>
+                        <li><img src="./img/icon-person.svg" alt=""><span>Me chamo Guilherme dos Reis Leoni.</span></li>
+                        <li><img src="./img/icon-person.svg" alt=""><span>Tenho 17 anos.</span></li>
+                        <li><img src="./img/icon-book.svg" alt=""><span>Cursando técnico em informática no IF Machado.</span></li>
+                        <li><img src="./img/icon-comp.svg" alt=""><span>Adoro programar e tudo relacionado a tecnologia.</span></li>
+                    </ul>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus molestias illum fugit quas sed pariatur sint saepe rerum sequi quos unde, hic minima exercitationem rem nulla officiis reprehenderit magni deleniti?</p>
+                </div>
+                <div class="sobre-right">
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="card-projetos">
+                                <img src="" alt="">
+                                <h1>oi</h1>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card-projetos">
+                                <img src="" alt="">
+                                <h1>test</h1>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -179,6 +205,14 @@
             spaceBetween: 32,
             pagination: {
                 el: ".s-servicos .container .main-area-servicos .right-area-servicos .swiper-pagination",
+                clickable: true,
+            },
+        });
+        var swiper_projetos = new Swiper(".sobre-right", {
+            slidesPerView: 1,
+            spaceBetween: 32,
+            pagination: {
+                el: ".s-sobre .container .main-sobre .sobre-right .swiper-pagination",
                 clickable: true,
             },
         });

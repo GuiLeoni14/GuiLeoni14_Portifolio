@@ -66,6 +66,11 @@
             border-radius: 10px;
             color: #fff;
             background-color: #6D00FF;
+            transition: all .3s;
+            &:hover{
+                background-color: rgb(153, 228, 238);
+                color: #6D00FF;
+            }
         }
         p{
             text-align: center;
