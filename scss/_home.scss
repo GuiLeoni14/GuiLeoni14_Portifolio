@@ -190,6 +190,9 @@
     background: url("../img/subtle-prism.svg") no-repeat center center;
     padding: 10rem 0rem;
     overflow: hidden;
+    display: flex;
+    flex-direction: center;
+    align-items: center;
     .container{
         .main-sobre{
             @include flex(row, flex-start, space-between);
@@ -410,6 +413,15 @@ footer{
                     }
                 }
             }
+        }
+    }
+    .f-footer{
+        @include flex(row, center, space-between);
+        :nth-child(2){
+            text-transform: uppercase;
+        }
+        span{
+            font-size: 1.6rem;
         }
     }
 }

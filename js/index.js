@@ -1,9 +1,13 @@
-// const count = document.getElementById('number');
-// function callback (){
-//     cont_number = parseInt(5 + (Math.random()*1));
-//     count.textContent = Number(count.textContent) + cont_number;
-//     if (clearInterval(Number(count.textContent) >= 65)){
-//         clearInterval(intervalo);
-//     }
-// }
-// var intervalo = setInterval(callback, 300);
+const header = document.querySelector('.js-header');
+
+function fixedMenu(){
+    console.log(window.pageYOffset);
+    if (window.pageYOffset >= 80){
+        header.classList.add('fixed-menu');
+        console.log('teste')
+    } else {
+        header.classList.remove('fixed-menu');
+    }
+}
+
+window.addEventListener('scroll', fixedMenu);
