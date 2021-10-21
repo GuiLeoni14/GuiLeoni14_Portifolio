@@ -1,8 +1,12 @@
 .s-home{
+    padding: 20rem 0rem;
     display: flex;
     align-items: center;
     background: url(../img/background-home.svg) no-repeat center center;
     background-size: cover;
+    @include responsive(800px){
+        padding: 0;
+    }
     .container{
         .main-home{
             margin-top: 10rem;
@@ -72,11 +76,57 @@
                 }
             }
         }
+        @include responsive(480px){
+            .main-home{
+                @include flex(column-reverse, center, center);
+                .text-home{
+                    width: 100%;
+                    h1{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 5.5rem;
+                        span{
+                            justify-content: center;
+                        }
+                    }
+                    &::after{
+                        display: none;
+                    }
+                    p{
+                        margin-top: 1rem;
+                        text-align: justify;
+                        padding: 2rem;
+                    }
+                }
+                .img-home{
+                    width: 100%;
+                    align-items: center;
+                    img{
+                        max-width: 25rem;
+                    }
+                    .socias-home{
+                        ul{
+                            li{
+                                img{
+                                    max-width: 5rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 .s-servicos{
+    padding-bottom: 20rem;
     overflow: hidden;
     position: relative;
+    @include responsive(800px){
+        padding: 0;
+    }
     .container{
         .main-area-servicos{
             // background: url("../img/dalmatian-spots.svg") no-repeat center center;
@@ -150,7 +200,7 @@
             justify-content: center;
             .text{
                 width: 100%;
-                width: 85rem;
+                max-width: 85rem;
                 background-color: #f5f1f1;
                 border-radius: 2rem;
                 display: flex;
@@ -179,6 +229,47 @@
                         height: 1rem;
                         border-radius: 12px 12px 0px 0px;
                         background-color:  rgba(54, 8, 163, 0.555);
+                    }
+                }
+            }
+        }
+        @include responsive(991px){
+            .tec-info{
+                left: 10px;
+            }
+        }
+        @include responsive(480px){
+            .main-area-servicos{
+                .right-area-servicos{
+                    .text{
+                        width: 100%;
+                        h2{
+                            font-size: 3rem;
+                        }
+                        span{
+                            font-size: 1.7rem;
+                        }
+                    }
+                    .swiper-pagination{
+                        max-width: 60%;
+                    }
+                    .aviso-cards{
+                        span{
+                            padding: 2rem 0rem;
+                        }
+                    }
+                }
+            }
+            .tec-info{
+                left: 0px;
+                .text{
+                    max-width: 90%;
+                    h3{
+                        font-size: 2rem;
+                        text-align: center;
+                    }
+                    p{
+                        text-align: justify;
                     }
                 }
             }
@@ -293,6 +384,7 @@
                     flex-direction: column;
                     .swiper-pagination-two{
                         max-width: 25%;
+                        height: 2rem;
                         position: absolute;
                         top: -10px;
                         left: 395px;
@@ -317,114 +409,65 @@
                 }
             }
         }
+        @include responsive (991px){
+            .main-sobre{
+                .sobre-left{
+                    max-width: 50%;
+                }
+                .sobre-right{
+                    .swiper-one{
+                        .swiper-pagination{
+                            max-width: 30%;
+                            left: 309px;
+                        }
+                    }
+                    .swiper-two{
+                        .swiper-pagination-two{
+                            max-width: 30%;
+                            left: 350px;
+                        }
+                    }
+                }
+            }
+        }
+        @include responsive(480px){
+            .main-sobre{
+                @include flex(column, center, center);
+                .sobre-left{
+                    max-width: 100%;
+                    ul{
+                        li{
+                            span{
+                                font-size: 1.4rem;
+                            }
+                            &:not(:first-child){
+                                margin-top: 1.2rem;
+                            }
+                        }
+                    }
+                }
+                .sobre-right{
+                    margin-top: 4rem;
+                    max-width: 100%;
+                    .swiper-one{
+                        .swiper-pagination{
+                            max-width: 35%;
+                            left: 230px;
+                        }
+                    }
+                    .swiper-two{
+                        .swiper-pagination-two{
+                            max-width: 35%;
+                            left: 270px;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
-footer{
-    padding: 4rem;
-    .background-footer{
-        border-radius: 4rem;
-        background-color: #eddaff;
-        .main-contato{
-            padding: 4rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            h2{
-                font-size: 5rem;
-                margin-top: 2rem;
-            }
-            span{
-                font-family: "Inter", sans-serif;
-                position: relative;
-                font-size: 3.4rem;
-                opacity: 0.6;
-                font-style: italic;
-                letter-spacing: 1rem;
-                &::before{
-                    position: absolute;
-                    content: "";
-                    bottom: 1.5rem;
-                    left: -10rem;
-                    width: 10rem;
-                    height: 0.3rem;
-                    border-radius:12px 0px 12px 0px;
-                    background-color:  rgb(88, 8, 163);
-                }&::after{
-                    position: absolute;
-                    content: "";
-                    bottom: 15px;
-                    right: -10rem;
-                    width: 10rem;
-                    height: 0.3rem;
-                    border-radius:12px 0px 12px 0px;
-                    background-color:  rgb(88, 8, 163);
-                }
-            }
-            a{
-                margin-top: 2rem;
-                font-size: 2rem;
-            }
-        }
-    }
-    .container{
-        nav{
-            padding: 6rem;
-            ul{
-                @include flex(row, center, center);
-                li{
-                    &:not(:first-child){
-                        margin-left: 2rem;
-                    }
-                    &:hover{
-                        &:nth-child(1) .img-social{
-                            border-color: #2427ee;
-                        }
-                        &:nth-child(2) .img-social{
-                            border-color: #07a32e;
-                        }
-                        &:nth-child(3) .img-social{
-                            border-color: #cc00ff;
-                        }
-                        &:nth-child(4) .img-social{
-                            border-color: #00b7ff;
-                        }
-                        &:nth-child(5) .img-social{
-                            border-color: #0066ff;
-                        }
-                        &:nth-child(6) .img-social{
-                            border-color: #000000;
-                        }
-                    }
-                    .img-social{
-                        padding: 4rem;
-                        border-radius: 50%;
-                        border: 1rem solid $border-color;
-                        transition: all .3s;
-                        img{
-                            width: 100%;
-                            max-width: 6rem;
-                            height: 6rem;
-                        }
-                        &:hover{
-                            transform: scale(1.1);
-                        }
-                    }
-                }
-            }
-        }
-    }
-    .f-footer{
-        @include flex(row, center, space-between);
-        :nth-child(2){
-            text-transform: uppercase;
-        }
-        span{
-            font-size: 1.6rem;
-        }
-    }
-}
+
 
 @keyframes floating{
     0%{

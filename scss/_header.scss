@@ -4,12 +4,18 @@ header{
     z-index: 2021;
     height: 10rem;
     background-color: #6D00FF;
+    @include responsive(800px){
+        height: 7rem;
+    }
     .container{
         @include flex(row, center, space-between);
         .logo{
             width: 100%;
             max-width: 10rem;
             height: auto;
+            @include responsive(800px){
+                max-width: 7rem;
+            }
             img{
                 max-width: 100%;
             }
@@ -35,6 +41,17 @@ header{
                         }
                     }
                 }
+            }
+        }
+        .btn-mobile{
+            display: none;
+        }
+        @include responsive(800px){
+            nav{
+                display: none;
+            }
+            .btn-mobile{
+                display: block;
             }
         }
     }

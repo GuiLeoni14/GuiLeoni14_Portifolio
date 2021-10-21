@@ -29,6 +29,7 @@
                 </ul>
                 <a class="btn btn-primary" href="#">Converse comigo</a>
             </nav>
+            <a href="" class="btn btn-primary btn-mobile">mobile</a>
         </div>
     </header>
     <section class="s-home">
@@ -299,8 +300,10 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
             var largura = window.screen.width;
-            if (largura <= 991){
+            if (largura <= 991 && largura > 480){
                 altura = 2
+            }else if(largura <= 480){
+                altura = 1    
             }else{
                 altura = 3
             }

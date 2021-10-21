@@ -5,6 +5,9 @@
     justify-content: space-between;
     overflow: hidden;
     padding: 2rem;
+    @include responsive(991px){
+        padding: 6rem;
+    }
     .swiper-slide{
         display: flex;
         justify-content: flex-end;
@@ -140,5 +143,9 @@
                 }
             }
         }
+    }
+    @include responsive(480px){
+        padding: 2rem;
+        margin-bottom: 25rem;
     }
 }
