@@ -43,19 +43,89 @@ header{
                 }
             }
         }
-        .btn-mobile{
+        .img-mobile{
             display: none;
         }
         @include responsive(800px){
             nav{
                 display: none;
             }
-            .btn-mobile{
+            .img-mobile{
+                max-width: 4.3rem;
                 display: block;
             }
         }
     }
     transition: all .3s;
+    .menu-mobile{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        pointer-events: none;
+        z-index: 20000;
+        .overlay{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 0;
+        }
+        aside{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 75%;
+            height: 100%;
+            background-color: #fff;
+            padding: 3rem;
+            transform: translateX(-100%);
+            transition: all .3s;
+            .logo{
+                img{
+                    max-width: 10rem;
+                }
+            }
+            nav{
+                ul{
+                    li{
+                        padding: 1.5rem 0;
+                        display: block;
+                        font-size: 1.8rem;
+                    }
+                }
+                a{
+                    width: 100%;
+                    text-align: center;
+                    margin-top: 1rem;
+                    border-color: $border-color;
+                }
+            }
+        }
+    }
+}
+
+.menu-opened{
+    overflow: hidden;
+    .menu-mobile{
+        opacity: 1;
+        pointer-events: all;
+        aside{
+            transform: translateX(0%);
+            position: relative;
+            #icon-x{
+                position: absolute;
+                width: 100%;
+                max-width: 3rem;
+                top: 20px;
+                right: 30px;
+            }
+        }
+    }
 }
 .fixed-menu{
     background-color: #f2f2f2;
