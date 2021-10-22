@@ -5,15 +5,15 @@
 }
 
 .btn-primary{
-    color: $text-color-primary;
+    color: #fff;
     border: 2px solid #ffffff;
     line-height: 4.8rem;
     border-radius: 12.2rem;
     padding: 0 2.4rem;
     transition: all .4s;
     &:hover{
-        color: #fff;
-        background-color: $border-color;
+        color: #000;
+        background-color: rgb(142, 5, 255);
         border: 2px solid #fff;
     }
 }
