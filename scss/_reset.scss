@@ -12,6 +12,9 @@
 
 html{
     font-size: 62.5%;
+    @include responsive(320px){
+        font-size: 50%;
+    }
 }
 
 section{
