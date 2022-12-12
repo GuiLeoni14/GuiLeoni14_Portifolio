@@ -42,7 +42,8 @@
             .img-home{
                 width: 50%;
                 display: flex;
-                align-items: flex-end;
+                align-items: center;
+                justify-content: center;
                 flex-direction: column;
                 img{
                     border-radius: 40%;
@@ -79,7 +80,7 @@
                 }
             }
         }
-        @include responsive(480px){
+        @include responsive(765px){
             .main-home{
                 @include flex(column-reverse, center, center);
                 .text-home{
