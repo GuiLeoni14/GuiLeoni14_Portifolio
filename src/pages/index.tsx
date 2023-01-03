@@ -1,6 +1,7 @@
 import { AccordionAbout } from '../components/AccordionAbout';
 import { DefaultButton } from '../components/DefaultButton';
 
+// fazer um slide infinito rodando as tecnologias que utilizo embaixo da hero section
 export default function Home() {
   return (
     <main>
@@ -73,6 +74,27 @@ export default function Home() {
             Minha <strong className="font-bold bg-gradient-orange text-transparent bg-clip-text">trajetória</strong>
           </h2>
           <AccordionAbout />
+        </div>
+      </section>
+      <section className="bg-point bg-cover bg-center bg-no-repeat">
+        <div className="py-20 container mx-auto relative">
+          <div className="absolute inset-0 w-full h-full z-[-1] grid grid-cols-4">
+            <div className="h-full w-1 bg-gray-500"></div>
+            <div className="h-full w-1 bg-gray-500"></div>
+            <div className="h-full w-1 bg-gray-500"></div>
+            <div className="h-full border-solid border-x-4 border-gray-500"></div>
+          </div>
+          <div className="flex items-center justify-between">
+            <h2 className="font-bold text-6xl w-full">
+              Meus <strong className="bg-gradient-orange text-transparent bg-clip-text">cases</strong>
+            </h2>
+            <div className="flex items-end gap-4 w-full">
+              <img className="translate-y-4" src="/img/icons/arrow.svg" width={120} height={100} alt="" />
+              <span className="block font-medium text-gray-300 text-2xl">
+                As melhores tecnologia aliadas as melhores práticas constroem grandes soluções!
+              </span>
+            </div>
+          </div>
         </div>
       </section>
     </main>
