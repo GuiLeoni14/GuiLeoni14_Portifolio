@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { BsStars } from 'react-icons/bs';
 import { AccordionItem } from './AccordionItem';
 export function AccordionAbout() {
-  const [activeValueAccordion, setActiveValueAccordion] = useState('one');
+  const [activeValueAccordion, setActiveValueAccordion] = useState('two');
 
   const handleChangeAccordionAbout = (value: string) => {
     setActiveValueAccordion(value);
@@ -34,7 +34,7 @@ export function AccordionAbout() {
           />
         </div>
         <div className="w-full max-w-[70%]">
-          <Accordion.Root type="single" onValueChange={handleChangeAccordionAbout}>
+          <Accordion.Root type="single" onValueChange={handleChangeAccordionAbout} defaultValue="two">
             <AccordionItem title="Quem eu sou?" value="one">
               <span className="block text-xl font-medium text-gray-300">👋 Olá, me chamo Guilherme dos Reis Leoni</span>
               <p className="mt-2">
