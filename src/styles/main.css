@@ -3,9 +3,15 @@
 @tailwind utilities;
 
 body {
-  @apply bg-gray-900 text-gray-100;
+  @apply bg-gray-50 text-gray-900;
   -webkit-font-smoothing: antialiased;
 }
 img {
   max-width: 100%;
 }
+
+.trusted-by-swiper > div{
+   -webkit-transition-timing-function:linear!important;
+   -o-transition-timing-function:linear!important;
+   transition-timing-function:linear!important;
+  }

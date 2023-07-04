@@ -1,6 +1,11 @@
 import Image from 'next/image';
-import { AccordionAbout } from '../components/AccordionAbout';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import { Autoplay } from 'swiper/modules';
 import { DefaultButton } from '../components/DefaultButton';
+import { AccordionAbout } from '../components/AccordionAbout';
 
 // fazer um slide infinito rodando as tecnologias que utilizo embaixo da hero section
 export default function Home() {
@@ -26,47 +31,242 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="container mx-auto p-10 rounded-full flex flex-col justify-center items-center bg-gray-700 border border-gray-600">
-          <h2 className="text-4xl font-medium text-center">
-            <strong className="font-bold bg-gradient-orange text-transparent bg-clip-text">2+ anos </strong>
-            de experiência como{' '}
-            <strong className="font-bold bg-gradient-orange text-transparent bg-clip-text">
-              desenvolvedor front-end
-            </strong>
-          </h2>
-          <div className="flex items-center justify-center gap-10 w-full mt-4">
-            <div className="flex justify-center items-center gap-4 rounded-full bg-gray-900 p-4 shadow-2xl border border-gray-300">
-              <img src="/img/icons/code.svg" width={80} height={80} alt="" />
-              <strong className="block text-center">+2 anos estudando programação</strong>
-            </div>
-            <div className="flex justify-center items-center gap-4 rounded-full bg-gray-900 p-4 shadow-2xl border border-gray-200">
-              <img src="/img/icons/project.svg" width={80} height={80} alt="" />
-              <strong className="block text-center">+50 projetos realizados</strong>
-            </div>
-            <div className="flex justify-center items-center gap-4 rounded-full bg-gray-900 p-4 shadow-2xl border border-gray-200">
-              <img src="/img/icons/project.svg" width={80} height={80} alt="" />
-              <strong className="block text-center">+50 projetos realizados</strong>
-            </div>
-          </div>
-        </div>
       </section>
-      <section>
-        <div className="pt-20 container mx-auto">
-          <span className="block font-bold text-yellow-200 text-center">Quem é? Oque come? Onde vive?</span>
-          <h2 className="text-5xl font-bold text-center">
-            Minha <strong className="font-bold bg-gradient-orange text-transparent bg-clip-text">trajetória</strong>
+      <section className="py-20">
+        <div className="container mx-auto">
+          <h2 className="font-bold text-center text-6xl w-full">
+            Minhas <strong className="bg-gradient-orange text-transparent bg-clip-text">Tecnologias</strong>
           </h2>
-          <AccordionAbout />
         </div>
+        <Swiper
+          className="trusted-by-swiper w-full container mx-auto mt-10"
+          spaceBetween={40}
+          grabCursor={true}
+          a11y={{ enabled: false }}
+          freeMode={true}
+          speed={11000}
+          loop={true}
+          slidesPerView={6}
+          modules={[Autoplay]}
+          autoplay={{
+            delay: 0.5,
+            disableOnInteraction: false,
+          }}
+          breakpoints={{
+            0: {
+              spaceBetween: 30,
+            },
+            480: {
+              spaceBetween: 30,
+            },
+            767: {
+              spaceBetween: 40,
+            },
+            992: {
+              spaceBetween: 40,
+            },
+          }}
+        >
+          <SwiperSlide>
+            <div className="h-[86px] w-[86px] rounded-md border border-gray-200">
+              <img src="https://www.svgrepo.com/show/452092/react.svg" />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="h-[86px] w-[86px] rounded-md border border-gray-200">
+              <img src="https://www.svgrepo.com/show/452092/react.svg" />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="h-[86px] w-[86px] rounded-md border border-gray-200">
+              <img src="https://www.svgrepo.com/show/452092/react.svg" />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="h-[86px] w-[86px] rounded-md border border-gray-200">
+              <img src="https://www.svgrepo.com/show/452092/react.svg" />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="h-[86px] w-[86px] rounded-md border border-gray-200">
+              <img src="https://www.svgrepo.com/show/452092/react.svg" />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="h-[86px] w-[86px] rounded-md border border-gray-200">
+              <img src="https://www.svgrepo.com/show/452092/react.svg" />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="h-[86px] w-[86px] rounded-md border border-gray-200">
+              <img src="https://www.svgrepo.com/show/452092/react.svg" />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="h-[86px] w-[86px] rounded-md border border-gray-200">
+              <img src="https://www.svgrepo.com/show/452092/react.svg" />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="h-[86px] w-[86px] rounded-md border border-gray-200">
+              <img src="https://www.svgrepo.com/show/452092/react.svg" />
+            </div>
+          </SwiperSlide>
+        </Swiper>
+        <Swiper
+          className="trusted-by-swiper w-full container mx-auto mt-10"
+          spaceBetween={40}
+          grabCursor={true}
+          a11y={{ enabled: false }}
+          freeMode={true}
+          speed={11000}
+          loop={true}
+          slidesPerView={6}
+          modules={[Autoplay]}
+          autoplay={{
+            delay: 0.5,
+            reverseDirection: true,
+            disableOnInteraction: false,
+          }}
+          breakpoints={{
+            0: {
+              spaceBetween: 30,
+            },
+            480: {
+              spaceBetween: 30,
+            },
+            767: {
+              spaceBetween: 40,
+            },
+            992: {
+              spaceBetween: 40,
+            },
+          }}
+        >
+          <SwiperSlide>
+            <div className="h-[86px] w-[86px] rounded-md border border-gray-200">
+              <img src="https://www.svgrepo.com/show/452092/react.svg" />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="h-[86px] w-[86px] rounded-md border border-gray-200">
+              <img src="https://www.svgrepo.com/show/452092/react.svg" />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="h-[86px] w-[86px] rounded-md border border-gray-200">
+              <img src="https://www.svgrepo.com/show/452092/react.svg" />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="h-[86px] w-[86px] rounded-md border border-gray-200">
+              <img src="https://www.svgrepo.com/show/452092/react.svg" />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="h-[86px] w-[86px] rounded-md border border-gray-200">
+              <img src="https://www.svgrepo.com/show/452092/react.svg" />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="h-[86px] w-[86px] rounded-md border border-gray-200">
+              <img src="https://www.svgrepo.com/show/452092/react.svg" />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="h-[86px] w-[86px] rounded-md border border-gray-200">
+              <img src="https://www.svgrepo.com/show/452092/react.svg" />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="h-[86px] w-[86px] rounded-md border border-gray-200">
+              <img src="https://www.svgrepo.com/show/452092/react.svg" />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="h-[86px] w-[86px] rounded-md border border-gray-200">
+              <img src="https://www.svgrepo.com/show/452092/react.svg" />
+            </div>
+          </SwiperSlide>
+        </Swiper>
+        <Swiper
+          className="trusted-by-swiper w-full container mx-auto mt-10"
+          spaceBetween={40}
+          grabCursor={true}
+          a11y={{ enabled: false }}
+          freeMode={true}
+          speed={11000}
+          loop={true}
+          slidesPerView={6}
+          modules={[Autoplay]}
+          autoplay={{
+            delay: 0.5,
+            disableOnInteraction: false,
+          }}
+          breakpoints={{
+            0: {
+              spaceBetween: 30,
+            },
+            480: {
+              spaceBetween: 30,
+            },
+            767: {
+              spaceBetween: 40,
+            },
+            992: {
+              spaceBetween: 40,
+            },
+          }}
+        >
+          <SwiperSlide>
+            <div className="h-[86px] w-[86px] rounded-md border border-gray-200">
+              <img src="https://www.svgrepo.com/show/452092/react.svg" />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="h-[86px] w-[86px] rounded-md border border-gray-200">
+              <img src="https://www.svgrepo.com/show/452092/react.svg" />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="h-[86px] w-[86px] rounded-md border border-gray-200">
+              <img src="https://www.svgrepo.com/show/452092/react.svg" />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="h-[86px] w-[86px] rounded-md border border-gray-200">
+              <img src="https://www.svgrepo.com/show/452092/react.svg" />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="h-[86px] w-[86px] rounded-md border border-gray-200">
+              <img src="https://www.svgrepo.com/show/452092/react.svg" />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="h-[86px] w-[86px] rounded-md border border-gray-200">
+              <img src="https://www.svgrepo.com/show/452092/react.svg" />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="h-[86px] w-[86px] rounded-md border border-gray-200">
+              <img src="https://www.svgrepo.com/show/452092/react.svg" />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="h-[86px] w-[86px] rounded-md border border-gray-200">
+              <img src="https://www.svgrepo.com/show/452092/react.svg" />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="h-[86px] w-[86px] rounded-md border border-gray-200">
+              <img src="https://www.svgrepo.com/show/452092/react.svg" />
+            </div>
+          </SwiperSlide>
+        </Swiper>
       </section>
-      <section className="bg-point bg-cover bg-center bg-no-repeat">
+      <section className="bg-point bg-cover bg-center bg-no-repeat overflow-hidden">
         <div className="py-20 container mx-auto relative">
-          <div className="absolute inset-0 w-full h-full z-[-1] grid grid-cols-4">
-            <div className="h-full w-1 bg-gray-500"></div>
-            <div className="h-full w-1 bg-gray-500"></div>
-            <div className="h-full w-1 bg-gray-500"></div>
-            <div className="h-full border-solid border-x-4 border-gray-500"></div>
-          </div>
           <div className="flex items-center justify-between">
             <h2 className="font-bold text-6xl w-full">
               Meus <strong className="bg-gradient-orange text-transparent bg-clip-text">cases</strong>
@@ -78,6 +278,46 @@ export default function Home() {
               </span>
             </div>
           </div>
+        </div>
+        <div className="relative h-full">
+          <div className="py-20 flex items-center sticky top-0">
+            <div className="w-full container mx-auto">
+              <div className="max-w-[45%] space-y-10">
+                <img src="	https://lojaintegrada.com.br/assets/img/logo.svg" />
+                <div className="flex items-center gap-2">
+                  <span className="leading-10 inline-block rounded-full border-2 border-gray-900 text-gray-900 font-bold px-6 text-center text-2xl">
+                    React
+                  </span>
+                  <span className="leading-10 inline-block rounded-full border-2 border-gray-900 text-gray-900 font-bold px-6 text-center text-2xl">
+                    React
+                  </span>
+                  <span className="leading-10 inline-block rounded-full border-2 border-gray-900 text-gray-900 font-bold px-6 text-center text-2xl">
+                    React
+                  </span>
+                </div>
+                <h2 className="text-6xl font-bold">Acesso Digital agora é unico.io</h2>
+                <p className="text-2xl">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis eos dolore, iste velit enim maxime sint
+                  officia reiciendis amet cum vel nesciunt soluta libero doloremque cumque nam placeat ex dolorem.
+                </p>
+              </div>
+            </div>
+            <div
+              className="absolute right-0 top-0 bg-center bg-cover h-full w-full left-[50vw] max-w-[50vw]"
+              style={{
+                backgroundImage: `url("https://insany.design/wp-content/uploads/2021/08/clarice-02.jpg")`,
+              }}
+            ></div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div className="pt-20 container mx-auto">
+          <span className="block font-bold text-yellow-200 text-center">Quem é? Oque come? Onde vive?</span>
+          <h2 className="text-5xl font-bold text-center">
+            Minha <strong className="font-bold bg-gradient-orange text-transparent bg-clip-text">trajetória</strong>
+          </h2>
+          <AccordionAbout />
         </div>
       </section>
     </main>

@@ -15,7 +15,7 @@ export function AccordionAbout() {
   };
 
   return (
-    <div className="mt-8 p-10 bg-gray-700 ">
+    <div className="mt-8 p-10 bg-purple-50 dark:bg-gray-700 shadow-lg rounded-lg">
       <div className="flex items-center justify-between">
         <span className="text-2xl font-bold block bg-gradient-orange text-transparent bg-clip-text max-w-[60%]">
           <span className="font-belle text-yellow-200">&lt;h2&gt;</span>Never stop learning
